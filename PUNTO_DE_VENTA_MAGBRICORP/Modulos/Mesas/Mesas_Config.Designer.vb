@@ -26,10 +26,10 @@ Partial Class Mesas_Config
         Me.PNL_Salones = New System.Windows.Forms.Panel()
         Me.FLP_Salones = New System.Windows.Forms.FlowLayoutPanel()
         Me.PNL_Botones = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BTN_MasLetra = New System.Windows.Forms.Button()
+        Me.BTN_MenosLetra = New System.Windows.Forms.Button()
+        Me.BTN_MasBoton = New System.Windows.Forms.Button()
+        Me.BTN_MenosBoton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PNL_Busqueda = New System.Windows.Forms.Panel()
@@ -79,10 +79,10 @@ Partial Class Mesas_Config
         '
         'PNL_Botones
         '
-        Me.PNL_Botones.Controls.Add(Me.Button3)
-        Me.PNL_Botones.Controls.Add(Me.Button4)
-        Me.PNL_Botones.Controls.Add(Me.Button2)
-        Me.PNL_Botones.Controls.Add(Me.Button1)
+        Me.PNL_Botones.Controls.Add(Me.BTN_MasLetra)
+        Me.PNL_Botones.Controls.Add(Me.BTN_MenosLetra)
+        Me.PNL_Botones.Controls.Add(Me.BTN_MasBoton)
+        Me.PNL_Botones.Controls.Add(Me.BTN_MenosBoton)
         Me.PNL_Botones.Controls.Add(Me.Label2)
         Me.PNL_Botones.Controls.Add(Me.Label1)
         Me.PNL_Botones.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -91,41 +91,41 @@ Partial Class Mesas_Config
         Me.PNL_Botones.Size = New System.Drawing.Size(349, 100)
         Me.PNL_Botones.TabIndex = 2
         '
-        'Button3
+        'BTN_MasLetra
         '
-        Me.Button3.Location = New System.Drawing.Point(308, 53)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(23, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "+"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BTN_MasLetra.Location = New System.Drawing.Point(308, 53)
+        Me.BTN_MasLetra.Name = "BTN_MasLetra"
+        Me.BTN_MasLetra.Size = New System.Drawing.Size(23, 23)
+        Me.BTN_MasLetra.TabIndex = 5
+        Me.BTN_MasLetra.Text = "+"
+        Me.BTN_MasLetra.UseVisualStyleBackColor = True
         '
-        'Button4
+        'BTN_MenosLetra
         '
-        Me.Button4.Location = New System.Drawing.Point(279, 53)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(23, 23)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "-"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BTN_MenosLetra.Location = New System.Drawing.Point(279, 53)
+        Me.BTN_MenosLetra.Name = "BTN_MenosLetra"
+        Me.BTN_MenosLetra.Size = New System.Drawing.Size(23, 23)
+        Me.BTN_MenosLetra.TabIndex = 4
+        Me.BTN_MenosLetra.Text = "-"
+        Me.BTN_MenosLetra.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BTN_MasBoton
         '
-        Me.Button2.Location = New System.Drawing.Point(308, 23)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(23, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "+"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BTN_MasBoton.Location = New System.Drawing.Point(308, 23)
+        Me.BTN_MasBoton.Name = "BTN_MasBoton"
+        Me.BTN_MasBoton.Size = New System.Drawing.Size(23, 23)
+        Me.BTN_MasBoton.TabIndex = 3
+        Me.BTN_MasBoton.Text = "+"
+        Me.BTN_MasBoton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BTN_MenosBoton
         '
-        Me.Button1.Location = New System.Drawing.Point(279, 23)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(23, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "-"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BTN_MenosBoton.Location = New System.Drawing.Point(279, 23)
+        Me.BTN_MenosBoton.Name = "BTN_MenosBoton"
+        Me.BTN_MenosBoton.Size = New System.Drawing.Size(23, 23)
+        Me.BTN_MenosBoton.TabIndex = 2
+        Me.BTN_MenosBoton.Text = "-"
+        Me.BTN_MenosBoton.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -234,10 +234,10 @@ Partial Class Mesas_Config
     Friend WithEvents FLP_Salones As FlowLayoutPanel
     Friend WithEvents FLP_Mesas As FlowLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BTN_MasLetra As Button
+    Friend WithEvents BTN_MenosLetra As Button
+    Friend WithEvents BTN_MasBoton As Button
+    Friend WithEvents BTN_MenosBoton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents PNL_Salones As Panel
 End Class
