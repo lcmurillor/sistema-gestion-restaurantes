@@ -154,7 +154,7 @@ Public Class Mesas_Config
         FLP_Mesas.Controls.Add(boton)
     End Sub
 
-    Sub cambiarTamnioMesa(query As String)
+    Sub cambiarTamnio(query As String)
         Try
             abrir()
             Dim cmd As New SqlCommand(query, conexion)
@@ -164,15 +164,22 @@ Public Class Mesas_Config
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        dibujarMesas()
     End Sub
 
     Private Sub BTN_MasBoton_Click(sender As Object, e As EventArgs) Handles BTN_MasBoton.Click
-        cambiarTamnioMesa("aumentarTamanioMesa")
-        dibujarMesas()
+        cambiarTamnio("aumentarTamanioMesa")
     End Sub
 
     Private Sub BTN_MenosBoton_Click(sender As Object, e As EventArgs) Handles BTN_MenosBoton.Click
-        cambiarTamnioMesa("disminuirTamanioMesa")
-        dibujarMesas()
+        cambiarTamnio("disminuirTamanioMesa")
+    End Sub
+
+    Private Sub BTN_MenosLetra_Click(sender As Object, e As EventArgs) Handles BTN_MenosLetra.Click
+        cambiarTamnio("disminuirTamanioLetra")
+    End Sub
+
+    Private Sub BTN_MasLetra_Click(sender As Object, e As EventArgs) Handles BTN_MasLetra.Click
+        cambiarTamnio("aumentarTamanioLetra")
     End Sub
 End Class
