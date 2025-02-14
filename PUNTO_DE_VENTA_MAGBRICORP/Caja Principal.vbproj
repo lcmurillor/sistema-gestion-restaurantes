@@ -260,6 +260,12 @@
     <Compile Include="Modulos\Mesas\Mesas_Form_Agregar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulos\Mesas\Salones_Form_Agregar.Designer.vb">
+      <DependentUpon>Salones_Form_Agregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Mesas\Salones_Form_Agregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulos\NOTIFICACIONES EJERCICIO\NOTIFICACIONES.Designer.vb">
       <DependentUpon>NOTIFICACIONES.vb</DependentUpon>
     </Compile>
@@ -851,6 +857,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Mesas\Mesas_Form_Agregar.resx">
       <DependentUpon>Mesas_Form_Agregar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Mesas\Salones_Form_Agregar.resx">
+      <DependentUpon>Salones_Form_Agregar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\NOTIFICACIONES EJERCICIO\NOTIFICACIONES.resx">
       <DependentUpon>NOTIFICACIONES.vb</DependentUpon>

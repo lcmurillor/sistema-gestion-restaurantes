@@ -100,7 +100,7 @@ Public Class Mesas_Config
     End Sub
 
     ' Método para dibujar las mesas en el FlowLayoutPanel
-    Sub dibujarMesas()
+    Public Sub dibujarMesas()
         FLP_Mesas.Controls.Clear()
         Try
             abrir()
@@ -152,7 +152,33 @@ Public Class Mesas_Config
         End If
 
         FLP_Mesas.Controls.Add(boton)
+
+
+        AddHandler boton.Click, AddressOf btnMesaEvento
+
     End Sub
+
+
+    Sub btnMesaEvento(ByVal sender As System.Object, ByVal e As EventArgs)
+        Try
+            Dim botonSeleccionado As Button = DirectCast(sender, Button)
+            Dim id_Mesa As Integer = Convert.ToInt32(botonSeleccionado.Tag)
+            Dim nombreMesa As String = botonSeleccionado.Text
+            Dim estadoMesa As Boolean = If(botonSeleccionado.BackColor = Color.Green, 1, 0)
+            If (estadoMesa) Then
+                Mesas_Form_Agregar.id_Mesa = id_Mesa
+                Mesas_Form_Agregar.TXT_NombreMesa.Clear()
+                Mesas_Form_Agregar.TXT_NombreMesa.Focus()
+                Mesas_Form_Agregar.ShowDialog()
+            Else
+
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
 
     Sub cambiarTamnio(query As String)
         Try

@@ -35,9 +35,9 @@ Partial Class Mesas_Form_Agregar
         Me.lbl_AgregarMesa.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_AgregarMesa.Location = New System.Drawing.Point(72, 76)
         Me.lbl_AgregarMesa.Name = "lbl_AgregarMesa"
-        Me.lbl_AgregarMesa.Size = New System.Drawing.Size(253, 42)
+        Me.lbl_AgregarMesa.Size = New System.Drawing.Size(227, 42)
         Me.lbl_AgregarMesa.TabIndex = 0
-        Me.lbl_AgregarMesa.Text = "Agregar Mesa"
+        Me.lbl_AgregarMesa.Text = "Definir Mesa"
         '
         'TXT_NombreMesa
         '
@@ -52,9 +52,9 @@ Partial Class Mesas_Form_Agregar
         Me.LBL_NombreMesa.AutoSize = True
         Me.LBL_NombreMesa.Location = New System.Drawing.Point(68, 182)
         Me.LBL_NombreMesa.Name = "LBL_NombreMesa"
-        Me.LBL_NombreMesa.Size = New System.Drawing.Size(178, 13)
+        Me.LBL_NombreMesa.Size = New System.Drawing.Size(145, 13)
         Me.LBL_NombreMesa.TabIndex = 2
-        Me.LBL_NombreMesa.Text = "Ingrese el nombre de la nueva mesa"
+        Me.LBL_NombreMesa.Text = "Ingrese el nombre de la mesa"
         '
         'BTN_Guardar
         '
@@ -92,6 +92,8 @@ Partial Class Mesas_Form_Agregar
         Me.Controls.Add(Me.LBL_NombreMesa)
         Me.Controls.Add(Me.TXT_NombreMesa)
         Me.Controls.Add(Me.lbl_AgregarMesa)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Mesas_Form_Agregar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mesas_Form_Agregar"
