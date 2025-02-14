@@ -5,7 +5,7 @@ Public Class Mesas_Config
     Dim salonSeleccionado As String = ""
     Dim id_Salon As Integer = 0
 
-    Sub dibujarSalones()
+    Public Sub dibujarSalones()
         FLP_Salones.Controls.Clear()
         Try
             abrir()
@@ -165,15 +165,14 @@ Public Class Mesas_Config
             Dim id_Mesa As Integer = Convert.ToInt32(botonSeleccionado.Tag)
             Dim nombreMesa As String = botonSeleccionado.Text
             Dim estadoMesa As Boolean = If(botonSeleccionado.BackColor = Color.Green, 1, 0)
+            Mesas_Form_Agregar.id_Mesa = id_Mesa
             If (estadoMesa) Then
-                Mesas_Form_Agregar.id_Mesa = id_Mesa
-                Mesas_Form_Agregar.TXT_NombreMesa.Clear()
-                Mesas_Form_Agregar.TXT_NombreMesa.Focus()
-                Mesas_Form_Agregar.ShowDialog()
+                Mesas_Form_Agregar.TXT_NombreMesa.Text = nombreMesa
             Else
-
-
+                Mesas_Form_Agregar.TXT_NombreMesa.Clear()
             End If
+            Mesas_Form_Agregar.TXT_NombreMesa.Focus()
+            Mesas_Form_Agregar.ShowDialog()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -207,5 +206,9 @@ Public Class Mesas_Config
 
     Private Sub BTN_MasLetra_Click(sender As Object, e As EventArgs) Handles BTN_MasLetra.Click
         cambiarTamnio("aumentarTamanioLetra")
+    End Sub
+
+    Private Sub AgregarSalonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarSalonToolStripMenuItem.Click
+        Salones_Form_Agregar.ShowDialog()
     End Sub
 End Class

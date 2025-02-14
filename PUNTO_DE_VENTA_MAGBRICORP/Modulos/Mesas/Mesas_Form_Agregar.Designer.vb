@@ -27,6 +27,7 @@ Partial Class Mesas_Form_Agregar
         Me.LBL_NombreMesa = New System.Windows.Forms.Label()
         Me.BTN_Guardar = New System.Windows.Forms.Button()
         Me.BTN_Volver = New System.Windows.Forms.Button()
+        Me.BTN_Eliminar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lbl_AgregarMesa
@@ -71,22 +72,34 @@ Partial Class Mesas_Form_Agregar
         '
         'BTN_Volver
         '
-        Me.BTN_Volver.BackColor = System.Drawing.Color.Red
         Me.BTN_Volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTN_Volver.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_Volver.ForeColor = System.Drawing.Color.White
-        Me.BTN_Volver.Location = New System.Drawing.Point(112, 311)
+        Me.BTN_Volver.Location = New System.Drawing.Point(112, 359)
         Me.BTN_Volver.Name = "BTN_Volver"
         Me.BTN_Volver.Size = New System.Drawing.Size(160, 39)
         Me.BTN_Volver.TabIndex = 4
         Me.BTN_Volver.Text = "Volver"
         Me.BTN_Volver.UseVisualStyleBackColor = False
         '
+        'BTN_Eliminar
+        '
+        Me.BTN_Eliminar.BackColor = System.Drawing.Color.Red
+        Me.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTN_Eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_Eliminar.ForeColor = System.Drawing.Color.White
+        Me.BTN_Eliminar.Location = New System.Drawing.Point(112, 296)
+        Me.BTN_Eliminar.Name = "BTN_Eliminar"
+        Me.BTN_Eliminar.Size = New System.Drawing.Size(160, 57)
+        Me.BTN_Eliminar.TabIndex = 5
+        Me.BTN_Eliminar.Text = "Eliminar"
+        Me.BTN_Eliminar.UseVisualStyleBackColor = False
+        '
         'Mesas_Form_Agregar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(392, 424)
+        Me.Controls.Add(Me.BTN_Eliminar)
         Me.Controls.Add(Me.BTN_Volver)
         Me.Controls.Add(Me.BTN_Guardar)
         Me.Controls.Add(Me.LBL_NombreMesa)
@@ -107,4 +120,5 @@ Partial Class Mesas_Form_Agregar
     Friend WithEvents LBL_NombreMesa As Label
     Friend WithEvents BTN_Guardar As Button
     Friend WithEvents BTN_Volver As Button
+    Friend WithEvents BTN_Eliminar As Button
 End Class
