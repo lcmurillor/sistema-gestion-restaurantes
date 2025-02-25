@@ -5,6 +5,7 @@ Public Class Mesas_Config
     Dim salonSeleccionado As String = ""
     Dim id_Salon As Integer = 0
 
+
     Public Sub dibujarSalones()
         FLP_Salones.Controls.Clear()
         Try
@@ -28,11 +29,20 @@ Public Class Mesas_Config
         Dim boton As New Button()
         Dim panelPrincipal As New Panel()
         Dim panelLateral As New Panel()
+        Dim estado As Boolean = False
 
+        estado = If(Not IsDBNull(reader("Estado")), reader("Estado"), False)
         boton.Text = If(Not IsDBNull(reader("Nombre")), reader("Nombre").ToString(), "Sin Nombre")
         boton.Name = If(Not IsDBNull(reader("Id_Salon")), reader("Id_Salon").ToString(), "0")
         boton.Dock = DockStyle.Fill
         boton.BackColor = Color.Transparent
+
+        If Not estado Then
+            boton.Text = boton.Text & " (Inactivo)"
+            boton.BackColor = Color.Red
+            boton.ForeColor = Color.White
+        End If
+
         boton.Font = New System.Drawing.Font("Arial", 12)
         boton.FlatStyle = FlatStyle.Flat
         boton.FlatAppearance.BorderSize = 0
@@ -79,6 +89,11 @@ Public Class Mesas_Config
                     panelLateral.BackColor = Color.Transparent
                     boton.BackColor = Color.Transparent
                     boton.ForeColor = Color.Black
+                End If
+
+                If boton.Text.Contains("(Inactivo)") Then
+                    boton.BackColor = Color.Red
+                    boton.ForeColor = Color.White
                 End If
 
                 boton.BringToFront()
@@ -210,5 +225,23 @@ Public Class Mesas_Config
 
     Private Sub AgregarSalonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarSalonToolStripMenuItem.Click
         Salones_Form_Agregar.ShowDialog()
+    End Sub
+
+    Private Sub EliminarSalonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarSalonToolStripMenuItem.Click
+        eliminarSalon("eliminarSalon")
+    End Sub
+
+    Sub eliminarSalon(query As String)
+        Try
+            Dim cmd As New SqlCommand(query, conexion)
+            abrir()
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@Id_Salon", id_Salon)
+            cmd.ExecuteNonQuery()
+            Cerrar()
+            dibujarSalones()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

@@ -36,6 +36,7 @@ Partial Class Mesas_Config
         Me.TXT_BuscarSalon = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AgregarSalonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarSalonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PNL_Mesas = New System.Windows.Forms.Panel()
         Me.FLP_Mesas = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
@@ -169,7 +170,7 @@ Partial Class Mesas_Config
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarSalonToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarSalonToolStripMenuItem, Me.EliminarSalonToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(349, 24)
@@ -181,6 +182,12 @@ Partial Class Mesas_Config
         Me.AgregarSalonToolStripMenuItem.Name = "AgregarSalonToolStripMenuItem"
         Me.AgregarSalonToolStripMenuItem.Size = New System.Drawing.Size(104, 20)
         Me.AgregarSalonToolStripMenuItem.Text = "+ Agregar Salon"
+        '
+        'EliminarSalonToolStripMenuItem
+        '
+        Me.EliminarSalonToolStripMenuItem.Name = "EliminarSalonToolStripMenuItem"
+        Me.EliminarSalonToolStripMenuItem.Size = New System.Drawing.Size(102, 20)
+        Me.EliminarSalonToolStripMenuItem.Text = "- Eliminar Salon"
         '
         'PNL_Mesas
         '
@@ -240,4 +247,5 @@ Partial Class Mesas_Config
     Friend WithEvents BTN_MenosBoton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents PNL_Salones As Panel
+    Friend WithEvents EliminarSalonToolStripMenuItem As ToolStripMenuItem
 End Class
